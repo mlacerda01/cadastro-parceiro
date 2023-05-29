@@ -3,12 +3,120 @@
     padding: 0px;
     box-sizing: border-box;
     font-family: 'Roboto' sans-serif;
+    /* font-size: 1.6rem; */
 }
 
 :root{
     font-size: 62.5%;
+    --default-border: 0.1rem solid rgba(0, 0, 0, 0.15);
+    --default-border-radius: 1.2rem;
+    --default-margin-label: 1.5rem;
+    --default-color: #FF5678;
 }
 
-h1 span{
+body{
+    font-size: 1.8rem;
+}
+
+main header{
+    display: flex;
+    align-items: center;
+}
+
+main header a{
     color: #FF5678;
+    font-size: 2.4rem;
+    text-decoration: none;
+}
+.content{
+    display: grid;
+    grid-template-areas:
+    ". . . ."
+    ". hero form ."
+    ". hero form ."
+    ". . . ."; 
+    /* ". . . ."
+    ". hero hero ."
+    ". . form form"
+    ". . . ."; */
+    gap:8.5rem;
+}
+
+h1{
+    font-size: 6.4rem;
+}
+
+h1 span, main h2 span{
+    color: var(--default-color)
+}
+
+aside{
+    grid-area: hero;
+}
+
+main{
+    width: 60rem;
+    height: 52rem;
+    border: var(--default-border);
+    padding: 4.4rem 5.7rem;
+    border-radius: 0.8rem;
+    grid-area: form;
+}
+
+main h2{
+    font-size: 3.6rem;
+    max-width: 43rem;
+    font-weight: 500;
+}
+
+main .actions a {
+    background-color: #35E6E9;
+    color:#FFF;
+    display: flex;    
+    flex-flow: column wrap;
+    text-align: center;
+    font-size: 2.4rem;
+    border-radius: var(--default-border-radius);
+    height: 5.5rem;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 5.4rem;
+}
+
+main .actions a + a{
+    background-color: var(--default-color);
+}
+
+
+main footer p{
+    font-size: 1.6rem;
+    margin-top: 8rem;
+}
+
+main footer a{
+    margin-top: 1rem;
+    display: block;
+    font-size: 1.8rem;
+    text-align: center;
+    color: #000;
+}
+
+main form label{
+     font-size: 1.8rem;
+     font-weight: 400;
+     text-transform: lowercase;
+     margin-top: var(--default-margin-label);
+     display: block;
+}
+
+form input{
+    width: 489px;
+    height: 55px;
+    background: #FFFFFF;
+    border: var(--default-border);
+    border-radius: var(--default-border-radius);
+    
 }
